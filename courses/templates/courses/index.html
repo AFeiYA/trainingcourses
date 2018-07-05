@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'courses/style.css' %}">
+</head>
+</head>
+<body>
+index
+{% for course in latest_course_list  %}
+   <li><a href="{% url 'courses:detail' course.id %}">{{ course.course_text }}</a></li>
+{% endfor %}
+
+
+</body>
+</html>
